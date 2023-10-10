@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
 import 'package:workout_hard/resources/assets_manager.dart';
 import 'package:workout_hard/resources/routes_manager.dart';
 import 'package:workout_hard/resources/strings_manager.dart';
@@ -32,14 +31,14 @@ class _SplashViewBodyState extends State<SplashViewBody> {
             height: size.height * 0.1,
           ),
           SizedBox(
-            height: size.height * 0.4,
-            child: Lottie.asset(JsonAssets.splash).animateOnPageLoad(
+            height: size.height * 0.2,
+            child: Image.asset(ImageAssets.logo).animateOnPageLoad(
                 msDelay: 150, dx: 0.0, dy: -200.0, showDelay: 900),
           ),
           Column(
             children: [
               SizedBox(
-                height: size.height * 0.35,
+                height: size.height * 0.45,
               ),
               const Text(
                 AppStrings.developedBy,

@@ -2,11 +2,14 @@ const String imagePath = 'assets/images';
 const String jsonPath = 'assets/json';
 
 class ImageAssets {
-  static const String gym1 = "$jsonPath/gym1.json";
-  static const String gym2 = "$jsonPath/gym2.json";
-  static const String gym3 = "$jsonPath/gym3.json";
-  static const String gym4 = "$jsonPath/gym4.json";
-  static const String medal = "$jsonPath/medal.json";
+  static const String logo = "$imagePath/logo.png";
+  static const String menu = "$imagePath/menu.png";
+  static const String gym1 = "$imagePath/gym1.png";
+  static const String gym2 = "$imagePath/gym2.png";
+  static const String gym3 = "$imagePath/gym3.png";
+  static const String gym4 = "$imagePath/gym4.png";
+  static const String medal = "$imagePath/medal.png";
+  static const String profile = "$imagePath/profile.jpg";
 }
 
 class JsonAssets {

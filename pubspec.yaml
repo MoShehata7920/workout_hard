@@ -32,8 +32,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_animate: ^4.2.0+1
-  lottie: ^2.6.0
-  shared_preferences: ^2.2.1
+  flutter_iconly: ^1.0.2
 
 dev_dependencies:
   flutter_lints: ^2.0.0
@@ -53,7 +52,7 @@ flutter:
   assets:
     - assets/images/
     - assets/json/
-    
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
   # For details regarding adding assets from package dependencies, see
