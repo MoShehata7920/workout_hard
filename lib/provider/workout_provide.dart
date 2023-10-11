@@ -3,6 +3,10 @@ import 'package:workout_hard/models/workout_model.dart';
 import 'package:workout_hard/resources/assets_manager.dart';
 
 class WorkOutData extends ChangeNotifier {
+  WorkOut findById(int id) {
+    return workOutList.firstWhere((workout) => workout.id == id);
+  }
+
   final List<WorkOut> workOutList = [
     WorkOut(
       id: 0,
