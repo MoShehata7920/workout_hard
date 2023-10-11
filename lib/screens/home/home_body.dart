@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:workout_hard/provider/exercise_provider.dart';
 import 'package:workout_hard/provider/workout_provide.dart';
 import 'package:workout_hard/resources/assets_manager.dart';
 import 'package:workout_hard/resources/strings_manager.dart';
 import 'package:workout_hard/widgets/card_widget.dart';
 import 'package:workout_hard/widgets/image_circle_avatar_widget.dart';
+import 'package:workout_hard/widgets/scrollable_list_widget.dart';
 import 'package:workout_hard/widgets/search_text_field.dart';
 
 class HomeBody extends StatelessWidget {
@@ -53,12 +55,27 @@ class HomeBody extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 15),
-          const Text(
-            AppStrings.withoutPacks,
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 22,
-            ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const Text(
+                AppStrings.withoutPacks,
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                ),
+              ),
+              TextButton(
+                  onPressed: () {
+                    showModalBottomSheet(
+                      context: context,
+                      builder: (context) => viewAllExercises(context),
+                    );
+                  },
+                  child: const Text(
+                    AppStrings.viewAllExercises,
+                  ))
+            ],
           ),
           const SizedBox(height: 15),
           Expanded(
@@ -98,6 +115,44 @@ class HomeBody extends StatelessWidget {
             ),
           )
         ],
+      ),
+    );
+  }
+
+  Widget viewAllExercises(BuildContext context) {
+    return SingleChildScrollView(
+      child: Container(
+        height: 200,
+        color: const Color(0xFF00001a),
+        padding: EdgeInsets.only(
+          bottom: MediaQuery.of(context).viewInsets.bottom,
+        ),
+        child: Padding(
+          padding: const EdgeInsets.only(top: 8.0),
+          child: Column(
+            children: [
+              const Text(
+                AppStrings.allExercises,
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                ),
+              ),
+              Expanded(
+                child: ListView.builder(
+                    physics: const BouncingScrollPhysics(),
+                    itemCount:
+                        Provider.of<ExerciseData>(context).exerciseList.length,
+                    itemBuilder: (context, index) => ScrollableList(
+                        itemAsset: ImageAssets.gym4,
+                        itemText: Provider.of<ExerciseData>(
+                          context,
+                          listen: false,
+                        ).exerciseList[index].legExtension)),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

@@ -16,6 +16,8 @@ class AppStrings {
   static const String withoutPacks = "Without Packs";
   static const String hours = "Hours";
   static const String exercises = "Exercises";
+  static const String allExercises = "All Exercises";
+  static const String viewAllExercises = "View all exercises";
 
   // Search
   static String searchText = "What's in Your mind";
