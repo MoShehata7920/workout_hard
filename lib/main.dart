@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:workout_hard/provider/exercise_provider.dart';
+import 'package:workout_hard/provider/workout_provide.dart';
 import 'package:workout_hard/resources/routes_manager.dart';
 import 'package:workout_hard/screens/splash_screen/splash_screen.dart';
 
@@ -21,14 +24,19 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: const Color(0xFF00001a)
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (context) => ExerciseData()),
+        ChangeNotifierProvider(create: (context) => WorkOutData()),
+      ],
+      child: MaterialApp(
+        theme: ThemeData.dark()
+            .copyWith(scaffoldBackgroundColor: const Color(0xFF00001a)),
+        debugShowCheckedModeBanner: false,
+        onGenerateRoute: RouteGenerator.getRoute,
+        initialRoute: Routes.splashRoute,
+        home: const SplashScreen(),
       ),
-      debugShowCheckedModeBanner: false,
-      onGenerateRoute: RouteGenerator.getRoute,
-      initialRoute: Routes.splashRoute,
-      home: const SplashScreen(),
     );
   }
 }

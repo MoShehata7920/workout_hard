@@ -13,6 +13,9 @@ class AppStrings {
   static const String gymnastics = "Gymnastics";
   static const String fitness = "Fitness";
   static const String aerobics = "Aerobics";
+  static const String withoutPacks = "Without Packs";
+  static const String hours = "Hours";
+  static const String exercises = "Exercises";
 
   // Search
   static String searchText = "What's in Your mind";

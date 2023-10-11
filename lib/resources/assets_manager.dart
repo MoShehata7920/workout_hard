@@ -10,6 +10,10 @@ class ImageAssets {
   static const String gym4 = "$imagePath/gym4.png";
   static const String medal = "$imagePath/medal.png";
   static const String profile = "$imagePath/profile.jpg";
+  static const String img1 = "$imagePath/img1.jpg";
+  static const String img2 = "$imagePath/img2.jpg";
+  static const String img3 = "$imagePath/img3.jpg";
+  static const String img4 = "$imagePath/img4.jpg";
 }
 
 class JsonAssets {
