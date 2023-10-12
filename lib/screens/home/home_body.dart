@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:workout_hard/provider/exercise_provider.dart';
 import 'package:workout_hard/provider/workout_provide.dart';
 import 'package:workout_hard/resources/assets_manager.dart';
+import 'package:workout_hard/resources/routes_manager.dart';
 import 'package:workout_hard/resources/strings_manager.dart';
 import 'package:workout_hard/widgets/card_widget.dart';
 import 'package:workout_hard/widgets/image_circle_avatar_widget.dart';
@@ -144,11 +145,21 @@ class HomeBody extends StatelessWidget {
                     itemCount:
                         Provider.of<ExerciseData>(context).exerciseList.length,
                     itemBuilder: (context, index) => ScrollableList(
-                        itemAsset: ImageAssets.gym4,
-                        itemText: Provider.of<ExerciseData>(
-                          context,
-                          listen: false,
-                        ).exerciseList[index].legExtension)),
+                          itemAsset: ImageAssets.gym4,
+                          itemText: Provider.of<ExerciseData>(
+                            context,
+                            listen: false,
+                          ).exerciseList[index].legExtension,
+                          tileFunction: () {
+                            Navigator.of(context).pushNamed(
+                              Routes.detailsScreenRoute,
+                              arguments: Provider.of<ExerciseData>(context,
+                                      listen: false)
+                                  .exerciseList[index]
+                                  .workOutId,
+                            );
+                          },
+                        )),
               ),
             ],
           ),

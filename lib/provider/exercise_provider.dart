@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:workout_hard/models/exercise_model.dart';
 
 class ExerciseData extends ChangeNotifier {
-  Exercise exercise(int id) {
+  Exercise findById(int id) {
     return exerciseList.firstWhere((exercise) => exercise.workOutId == id);
   }
 

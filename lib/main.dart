@@ -33,6 +33,7 @@ class _MyAppState extends State<MyApp> {
         theme: ThemeData.dark()
             .copyWith(scaffoldBackgroundColor: const Color(0xFF00001a)),
         debugShowCheckedModeBanner: false,
+        title: 'Workout Hard',
         onGenerateRoute: RouteGenerator.getRoute,
         initialRoute: Routes.splashRoute,
         home: const SplashScreen(),
