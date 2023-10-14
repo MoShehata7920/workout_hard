@@ -27,7 +27,6 @@ class DetailsScreenState extends State<DetailsScreen> {
 
   late VideoPlayerController _videoController;
   var isInit = true;
-  var isFetched = false;
   late WorkOut workout;
   late Exercise exercise;
 
