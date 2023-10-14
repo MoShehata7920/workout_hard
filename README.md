@@ -21,11 +21,11 @@ This Flutter app provides a platform for users to access various workout routine
 
 ## Screenshots
 
-| Home Screen |
+| Home Screen | Show All Exercises |
 | :------: | :----------: |
 | ![conversations Screen](screenshots/home_screen.jpg) | ![messaging Screen](screenshots/all_exercises.jpg) |
 
-| WorkOut Details Screen |
+| Workout Details Screen | WorkoutVideo |
 | :------: | :----------: |
 | ![ForgotPassword Screen](screenshots/details_screen.jpg) | ![SavedProducts Screen](screenshots/workout_details.jpg) |
 
