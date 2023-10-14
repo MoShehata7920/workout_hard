@@ -45,6 +45,20 @@ This Flutter app provides a platform for users to access various workout routine
    git clone https://github.com/your_username/your_repo.git
    cd your_repo/
 
+2. Install dependencies:
+
+   ```shell
+   flutter pub get
+
+3. Run the app:
+   ```shell
+   flutter run
+
+
+shell
+Copy code
+flutter run
+
 ## Usage
 -Launch the app on your preferred mobile device or emulator.
 -Explore the available workout routines and choose one to view details.
