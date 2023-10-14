@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:workout_hard/resources/assets_manager.dart';
 
 class ScrollableList extends StatelessWidget {
   const ScrollableList(
@@ -23,7 +24,7 @@ class ScrollableList extends StatelessWidget {
               child: Image.asset(itemAsset),
             )),
         trailing: Image.asset(
-          'assets/images/medal.png',
+          ImageAssets.medal,
           width: 15,
         ),
         title: RichText(

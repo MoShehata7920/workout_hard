@@ -20,5 +20,14 @@ class AppStrings {
   static const String viewAllExercises = "View all exercises";
 
   // Search
-  static String searchText = "What's in Your mind";
+  static const String searchText = "What's in Your mind";
+  
+  // Search
+  static const String coach = "Coach";
+  static const String description = "Description:";
+  static const String getStarted = "Get Started";
+  static const String squat = "Squat";
+  static const String legPress = "Leg Press";
+  static const String lunge = "Lunge";
+  static const String legExtension = "Leg Extension";
 }
